@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'echo present working dir: && pwd'
                 checkout scm
                 sh 'npm install'
             }
