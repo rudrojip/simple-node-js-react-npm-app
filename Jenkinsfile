@@ -1,5 +1,5 @@
 pipeline {
-    agent docker
+    agent 'Slave-1'
     environment {
         CI = 'true'
     }
