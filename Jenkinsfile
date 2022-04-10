@@ -3,9 +3,13 @@ pipeline {
     environment {
         CI = 'true'
     }
+    options {
+        skipDefaultCheckout(true)
+    }
     stages {
         stage('Build') {
             steps {
+                checkout scm
                 sh 'npm install'
             }
         }
