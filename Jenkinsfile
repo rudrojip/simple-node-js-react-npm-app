@@ -7,6 +7,9 @@ pipeline {
         skipDefaultCheckout(true)
     }
     stages {
+        stage ('Clean') {
+            deleteDir()
+        }       
         stage('Build') {
             steps {
                 sh 'echo present working dir: && pwd'
